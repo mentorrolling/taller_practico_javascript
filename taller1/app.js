@@ -4,19 +4,19 @@
 // let porcentajePrecioConDescuento = 100 - descuento;
 // let precioConDescuento = precioOriginal * (porcentajeDescuento / 100);
 
+// console.log({
+//   precioOriginal,
+//   descuento,
+//   porcentajePrecioConDescuento,
+//   precioConDescuento,
+// });
+
 function calcularPrecioConDescuento(precio, descuento) {
   let porcentajePrecioConDescuento = 100 - descuento;
   let precioConDescuento = precio * (porcentajePrecioConDescuento / 100);
 
   return precioConDescuento;
 }
-
-console.log({
-  precioOriginal,
-  descuento,
-  porcentajePrecioConDescuento,
-  precioConDescuento,
-});
 
 //   Cuando se realiza el submit del formulario
 document.querySelector("form").addEventListener("submit", (e) => {
