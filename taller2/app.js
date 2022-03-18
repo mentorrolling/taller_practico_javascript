@@ -8,7 +8,7 @@ let billetes = [
   { valor: 10, cantidad: 2 },
 ];
 
-let extraer = 180;
+let extraer = 0;
 let cantBilletes = 0;
 let papeles = 0;
 let entregado = [];
@@ -18,7 +18,7 @@ const totalCajero = () => {
   //    for (const item of billetes) {
   //        total=total + item.valor *item.cantidad
   //    }
-
+  total = 0;
   billetes.forEach((billete) => {
     total += billete.valor * billete.cantidad;
   });
@@ -47,7 +47,7 @@ const solicitarDinero = () => {
         //30 //10 //0
       }
     }
-
+    mostrarBilletes();
     totalCajero();
   } else {
     alert("El cajero no dispone de la cantidad solicitada");
@@ -61,8 +61,52 @@ const mostrarBilletes = () => {
   contenedorBilletes.innerHTML = "";
 
   //recorrer el arreglo entregable
+  for (const papel of entregado) {
+    switch (papel.valor) {
+      case 50:
+        let img50 = null;
+        for (let index = 0; index < papel.cantidad; index++) {
+          img50 = document.createElement("img");
+          img50.src = "./img/b50.png";
+          contenedorBilletes.appendChild(img50);
+        }
+        break;
+      case 20:
+        let img20 = null;
+        for (let index = 0; index < papel.cantidad; index++) {
+          img20 = document.createElement("img");
+          img20.src = "./img/b20.png";
+          contenedorBilletes.appendChild(img20);
+        }
+        break;
+      case 10:
+        let img10 = null;
+        for (let index = 0; index < papel.cantidad; index++) {
+          img10 = document.createElement("img");
+          img10.src = "./img/b10.png";
+          contenedorBilletes.appendChild(img10);
+        }
+        break;
+    }
+  }
+
   //switch por cada billete.valor
   // dentro de cada caso sacar cantidad y dibujar la cantidad de billetes
 };
+
+//botones del cajero
+function botonPresionado(valor) {
+  extraer += valor;
+  document.querySelector("#inputValue").value = extraer;
+}
+
+document.querySelector("#btn").addEventListener("click", solicitarDinero);
+
+document.querySelector("#inputValue").addEventListener("click", () => {
+  document.querySelector("#inputValue").value = "";
+  extraer = 0;
+  document.getElementById("container_billete").innerHTML = "";
+  entregado = [];
+});
 
 totalCajero();
