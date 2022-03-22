@@ -34,3 +34,32 @@ Se debe imprimir en pantalla la cantidad de billetes de cada denominación utili
 - Segundo paso: implementar las formulas en javascript
 - Tercer paso: crear funciones
 - Cuarto paso: Integrar JS con Html
+
+## Taller n° 3
+
+## Información de usuarios
+
+Tenemos una base de datos de usuarios que necesitamos ordenar en una tabla. La información la recibimos desde el backend en formato JSON.
+La tabla debe tener los siguientes encabezados:
+
+- Nombre
+- Correo
+- Teléfono
+- Dirección
+- Ciudad
+
+Se deben obtener esos datos de la información recibida. En el caso de la dirección la información debe mostrarse como el siguiente ejemplo:
+
+- Hoeger Mall - Apt. 692 (Coord: 29.4572, -164.2990)
+
+## Información de Empresas
+
+La información recibida de los usuarios también contiene, por cada uno, información de la compañia a la que pertenece. Necesitamos obtener los siguientes datos para mostrar:
+
+- Nombre (name)
+- Slogan (catchPhrase)
+
+Con dichos datos crear una serie de citas que incluyan el nombre de la empresa y su slogan.
+Usar Blockquotes de bootstrap para mostrar de esa manera la info.
+
+- https://getbootstrap.com/docs/5.1/content/typography/#blockquotes
