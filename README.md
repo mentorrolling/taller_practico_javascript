@@ -37,7 +37,7 @@ Se debe imprimir en pantalla la cantidad de billetes de cada denominación utili
 
 ## Taller n° 3
 
-## Información de usuarios
+### Información de usuarios
 
 Tenemos una base de datos de usuarios que necesitamos ordenar en una tabla. La información la recibimos desde el backend en formato JSON.
 La tabla debe tener los siguientes encabezados:
@@ -52,7 +52,7 @@ Se deben obtener esos datos de la información recibida. En el caso de la direcc
 
 - Hoeger Mall - Apt. 692 (Coord: 29.4572, -164.2990)
 
-## Información de Empresas
+### Información de Empresas
 
 La información recibida de los usuarios también contiene, por cada uno, información de la compañia a la que pertenece. Necesitamos obtener los siguientes datos para mostrar:
 
@@ -63,3 +63,17 @@ Con dichos datos crear una serie de citas que incluyan el nombre de la empresa y
 Usar Blockquotes de bootstrap para mostrar de esa manera la info.
 
 - https://getbootstrap.com/docs/5.1/content/typography/#blockquotes
+
+## Taller 4
+
+## Manejo de datos
+
+Se nos pide crear una interface de una web para fanáticos de la serie "Super Hero Squad". La página debe contener ciertos datos que vienen de un archivo json provisto previamente. Los datos necesarios son:
+
+- squadName
+- homeTown
+- formed
+- members
+
+El dato **members** contiene un arreglo **powers** que debemos trabajar para generar por cada héroe la lista de sus super poderes.
+Usar **fetch** para traer la info del archivo json y la **desestructuración** de objetos para acceder a los datos del objeto de ser necesario.
