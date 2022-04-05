@@ -32,7 +32,7 @@ const obtenerCategorias = () => {
   categorias = [...result];
 
   categorias.map((item) => {
-    let opcion = `<option value=${item}>${item}</option>`;
+    let opcion = `<option value="${item}">${item}</option>`;
     document.querySelector("#lista_categorias").innerHTML += opcion;
   });
 };

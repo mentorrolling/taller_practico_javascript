@@ -1,0 +1,13 @@
+.img-icon{
+    width: 32px;
+}
+
+.text-red{
+    color:rgb(244, 67, 54) !important;
+    text-align: center;
+}
+
+.text-green{
+    color:rgb(24, 198, 131) !important;
+   text-align: center;
+}
